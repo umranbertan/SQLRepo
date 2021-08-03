@@ -105,12 +105,17 @@ where title LIKE 'T%' and rating = 'G' ;
 ```
 ### 4-country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
 ```
-
+SELECT count (country) from country
+WHERE length (country) = 5;
 ```
 
+### 5-city tablosundaki şehir isimlerinin kaçtanesi 'R' veya r karakteri ile biter?
 
+```
+SELECT count (city) from city
+WHERE city ILIKE '%R';
 
-
+```
 
 
 
