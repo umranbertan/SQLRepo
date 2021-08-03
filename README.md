@@ -55,7 +55,8 @@ WHERE first_name IN ('Penelope', 'Nick' , 'Ed') ;
 SELECT rental_rate, replacement_cost FROM film
 WHERE rental_rate IN (0.99, 2.99, 4.99) and replacement_cost IN (12.99, 15.99, 28.99);
 ```
-*** #ÖDEV3  
+***
+# ÖDEV3  
 ### 1- **country** tablosunda bulunan country sütunundaki ülke isimlerinden 'A ' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.
 
 ```sql
