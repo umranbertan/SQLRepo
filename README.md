@@ -180,6 +180,20 @@ GROUP BY rating ;
 
 ```
 
+### 2- film tablosunda bulunan filmleri replacement_cost sütununa göre grupladığımızda film sayısı 50 den fazla olan relacement_cost değerini ve karşılık gelen film sayısını sıralayınız.
+```sql
+SELECT replacement_cost, count(title)  from film
+ group by replacement_cost 
+ having count(title) > 50;
+
+```
+
+### 3-customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir?
+
+```sql
+ SELECT store_id, count(*) from customer
+ group by store_id;
+```
 
 
 
