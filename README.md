@@ -88,30 +88,30 @@ WHERE title LIKE 'C%' AND length > 90 AND rental_rate =2.99  ;
 # ÖDEV4
 ### 1- film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
 
-```
+```sql
 SELECT DISTINCT replacement_cost FROM film;
 
 ```
 ### 2- film tablosunda bulunan relacement_cost sütununda birbirinden farklı kaç tane veri vardır?
 
-```
+```sql
 SELECT COUNT(DISTINCT replacement_cost) from film;
 ```
 ### 3- film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
-```
+```sql
 
 SELECT count (*) from film
 where title LIKE 'T%' and rating = 'G' ;
 ```
 ### 4-country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
-```
+```sql
 SELECT count (country) from country
 WHERE length (country) = 5;
 ```
 
 ### 5-city tablosundaki şehir isimlerinin kaçtanesi 'R' veya r karakteri ile biter?
 
-```
+```sql
 SELECT count (city) from city
 WHERE city ILIKE '%R';
 
@@ -119,7 +119,7 @@ WHERE city ILIKE '%R';
 ***
 # ÖDEV5
 ### 1-film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length ) 5 filmi sıralayınız.
-```
+```sql
 SELECT * FROM film
 where title LIKE '%n'
 Order BY (length) desc
@@ -128,7 +128,7 @@ limit 5;
 ```
 
 ### 2- film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en kısa (length )ikinci 5 filmi sıralayınız.
-```
+```sql
 SELECT * FROM film
 where title LIKE '%n'
 Order BY (length) asc
@@ -138,7 +138,7 @@ limit 5;
 ```
 
 ### 3- customer tablosunda bulunan last_name sütununa göre azalan yapılan sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
-```
+```sql
 SELECT * FROM customer
 where store_id =1 
 Order BY (last_name) desc
@@ -148,30 +148,43 @@ limit 4
 # ÖDEV6
 ### 1- film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
 
-```
+```sql
 SELECT avg(rental_rate) from film 
 
 ```
 ### 2- film tablosunda bulunan filmlerden kaçtanesi 'C' karakteri ile başlar?
 
-```
+```sql
 SELECT count(rental_rate) from film 
 WHERE title LIKE 'C%';
 ```
 ### 3- film tablosunda bulunan filmlerden rental_rate 0.99 a eşit olan en uzun(length) film kaç dakikadır?
 
-```
+```sql
 SELECT max(length) from film 
 WHERE rental_rate= 0.99 ; 
 ```
 ### 4- film tablosunda bulunan filmlerin uzunluğu  150 dakikadan büyük olanlarına ait kaç farklı replacement_cost değeri vardır?
-```
+```sql
  
 SELECT COUNT(DISTINCT replacement_cost) FROM film
 WHERE length > 150; 
 ```
 ***
-Ödev7
+# Ödev7
+### 1-film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.
+
+```sql
+SELECT rating, count(title) from film
+GROUP BY rating ;
+
+```
+
+
+
+
+
+
 
 
 
