@@ -194,6 +194,15 @@ SELECT replacement_cost, count(title)  from film
  SELECT store_id, count(*) from customer
  group by store_id;
 ```
+### 4- city tablosunda bulunan şehir verilerini country_id sütununa göre grupladıktan sonra en fazla şehir sayısı barındıra country_id bilgisini ve şehir sayısını paylşaınız. 
+
+```sql
+SELECT country_id, count(*) from city
+ Group by country_id
+ order by count(*) desc
+ LIMIT	 1;
+
+```
 
 
 
