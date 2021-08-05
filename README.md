@@ -145,7 +145,7 @@ Order BY (last_name) desc
 limit 4
 ```
 ***
-#ÖDEV6
+# ÖDEV6
 ### 1- film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
 
 ```
