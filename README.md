@@ -218,6 +218,7 @@ id INTEGER Primary key,
 ```
 ### 2- Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
 
+![Veriseti](dataset.png)
 
 
 
@@ -239,7 +240,11 @@ id INTEGER Primary key,
 
 
 
-```
+
+
+
+
+
 
 
 
