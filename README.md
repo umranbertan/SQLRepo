@@ -203,7 +203,20 @@ SELECT country_id, count(*) from city
  LIMIT	 1;
 
 ```
+***
+#ÖDEV8
+### 1- test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
 
+```sql
+CREATE TABLE employee(
+id INTEGER Primary key,
+	name VARCHAR(50) ,
+	birthday DATE,
+	email VARCHAR(100)
+
+);
+```
+### 2- Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
 
 
 
