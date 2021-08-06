@@ -355,7 +355,7 @@ where name ILIKE 'D%' ;
 ```
 
 ### 4- Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
-```
+```sql
 DELETE FROM employee
 WHERE email = 'vblamirec@jugem.jp';
 ***
@@ -367,12 +367,6 @@ DELETE FROM employee
 WHERE id BETWEEN 87 AND 89
 RETURNING *;
  ***
- 
- 
-
-
-
-
 ```
 
 
