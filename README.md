@@ -399,9 +399,23 @@ INNER JOIN customer ON customer.customer_id = rental.customer_id;
 ```
 
 
+***
+# ÖDEV9
+### 1- city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
 
 
 
+```sql
+SELECT country.country, city.city from country
+LEFT JOIN city ON country.country_id = city.country_id ;
+```
+
+### 2- customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+
+```sql
+SELECT  payment.payment_id, customer.last_name, customer.first_name from payment
+LEFT JOIN customer ON payment.customer_id=customer.customer_id ;
+```
 
 
 
