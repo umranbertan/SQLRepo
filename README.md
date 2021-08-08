@@ -480,8 +480,39 @@ EXCEPT ALL
 ) ;
 
 ```
+# ÖDEV11
+### 1-film tablosunda film uzunluğu length sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
 
+```sql
+SELECT count(*) FROM film
+WHERE length > (select AVG(length) from film) ;
 
+```
+### 2-film tablosunda en yüksek rental_rate değerine sahip kaç tane film vardır?
+
+```sql
+SELECT count(*) FROM film
+WHERE rental_rate = (select MAX(rental_rate) from film) ;
+
+```
+### 3-film tablosunda en düşük rental_rate ve en düşük replacement_cost değerlerine sahip filmleri sıralayınız.
+
+```sql
+select * from film 
+WHERE rental_rate = (select MIN (rental_rate) FROM film)
+AND
+ replacement_cost  = (SELECT MIN (replacement_cost) FROM film)  ;
+
+```
+
+### 4-fpayment tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
+
+```sql
+SELECT customer.customer_id, customer.first_name, customer.last_name, payment.amount FROM 
+customer INNER JOIN payment ON customer.customer_id = payment.customer_id
+WHERE payment.amount = (SELECT max(payment.amount) FROM payment)
+
+```
 
 
 
