@@ -510,7 +510,7 @@ AND
 ```sql
 SELECT customer.customer_id, customer.first_name, customer.last_name, payment.amount FROM 
 customer INNER JOIN payment ON customer.customer_id = payment.customer_id
-WHERE payment.amount = (SELECT max(payment.amount) FROM payment)
+WHERE amount = (SELECT max(amount) FROM payment)
 
 ```
 
